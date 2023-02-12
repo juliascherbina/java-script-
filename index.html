@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Here are all my exersices about java script</h1>
-    
+
 </body>
+<script>
+    let sucribers = [
+        { name: 'Olga', count: 10, profession: 'ballet-artist' },
+        { name: 'julia', count: 40, profession: 'recruiter' },
+        { name: 'Ura', count: 50, profession: 'translaiter' },
+        { name: 'Roma', count: 10, profession: 'proframmer' },
+        { name: 'Lera', count: 5, profession: 'actress' },
+        { name: 'Maria', count: 10, profession: 'logisticer' },
+        { name: 'Anton', count: 20, profession: 'bibliotekar' },
+        { name: 'Vlad', count: 20, profession: 'mathematiker' },
+        { name: 'Marina', count: 30, profession: 'painter' },
+        { name: 'Vera', count: 40, profession: 'physicist' },
+    ]
+
+    function congratsIfMoreThan10(array) {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].count >= 10) {
+                 alert('uxyyyy congratulations')
+            }
+        }
+    }
+    
+    congratsIfMoreThan10(sucribers)
+    
+    // function congratsIfMoreThan100(arr) {
+    //     if (arr >= 0) {
+    //         return alert('congratulations')
+    //     }
+    // };
+    //    let people=[100]
+    //   congratsIfMoreThan100(people)
+</script>
+
 </html>
