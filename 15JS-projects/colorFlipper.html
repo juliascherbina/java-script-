@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav>
+
+        <div class="nav-center">
+            <ul>
+                <h4>Color Flipper</h4>
+                <li>
+                    <a href="./color.html">Color</a>
+                </li>
+                <li>
+                    <a href="./hex.html">Hex</a>
+                </li>
+            </ul>
+        </div>
+        <div class="button1">background color: <span id="red">#F1f5f8</span>
+        </div>
+
+        <button class="button">Click me</button>
+    </nav>
+</body>
+<script>
+    let colors = ['blue', 'red', 'yellow', '#F1f5f8']
+    let arr = document.getElementById('red')
+    let button = document.querySelector('.button')
+    button.addEventListener('click', function () {
+        const RandomNumber=GetRandomNumber()
+        document.body.style.backgroundColor=colors[RandomNumber]
+        arr.textContent=colors[RandomNumber]
+    })
+ function GetRandomNumber(){
+    return Math.floor(Math.random() * colors.length)
+ }
+
+</script>
+
+</html>
