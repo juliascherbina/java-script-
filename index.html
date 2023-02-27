@@ -26,16 +26,16 @@
         { name: 'Vera', count: 40, profession: 'physicist' },
     ]
 
-    function congratsIfMoreThan10(array) {
-        for (let i = 0; i < array.length; i++) {
-            if (array[i].count >= 10) {
-                 alert('uxyyyy congratulations')
-            }
-        }
-    }
-    
-    congratsIfMoreThan10(sucribers)
-    
+    // function congratsIfMoreThan10(array) {
+    //     for (let i = 0; i < array.length; i++) {
+    //         if (array[i].count >= 10) {
+    //              alert('uxyyyy congratulations')
+    //         }
+    //     }
+    // }
+
+    // congratsIfMoreThan10(sucribers)
+
     // function congratsIfMoreThan100(arr) {
     //     if (arr >= 0) {
     //         return alert('congratulations')
@@ -43,6 +43,96 @@
     // };
     //    let people=[100]
     //   congratsIfMoreThan100(people)
+
+
+
+    // function squre(arr) {
+    //     for (let i = 0; i < arr.length; i++) {
+    //         arr[i] *= arr[i]
+    //     }
+    //     return arr
+    // }
+
+    // let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    // console.log(squre(array))
+
+
+    //написати функцію,яка приймає масив обєктів
+    // пробігається по ньому і додає прикметники
+    // які описують зовнішню красу людини відповідно до її статі
+    let arr = [
+        {
+            name: 'Olga',
+            sex: 'female',
+            age: 25
+        },
+        {
+            name: 'Anton',
+            sex: 'male',
+            age: 24
+        },
+        {
+            name: 'Ura',
+            sex: 'male',
+            age: 32
+        },
+        {
+            name: 'julia ',
+            sex: 'female',
+            age: 22
+        },
+
+
+    ]
+    let arr2 = arr.map(val => {
+        let obj = { ...val }
+        if (obj.sex == 'female') {
+            obj.outfit = 'women in red'
+        }
+        else obj.outfit = 'mans in black'
+        return obj
+    })
+    console.log(arr2)
+    // for(key of arr ) {
+    //     if(key.sex=='female') {
+    //         key.outfit='beautiful'
+    //     }
+    //     else key.outfit='men in darks outfits'
+    //     console.log(key)
+    // }
+    function outfitMaker(array) {
+        for (key of array) {
+            if (key.sex == 'female') {
+                key.outfit = 'women in red'
+                key.name += ' good'
+            }
+            else key.outfit = 'mans in black'
+        }
+        console.log(array)
+    }
+    outfitMaker(arr)
+
+
+
+    // console.log(element)
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     console.log(arr[i])
+
+
+    function outfitMaker2(array) {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].sex == 'male') {
+                array[i].outfit = 'man in black'
+            }
+            else
+                array[i].outfit = 'girls in red yeah!'
+        }
+        console.log(array)
+    }
+
+    outfitMaker2(arr)
+
 </script>
 
 </html>

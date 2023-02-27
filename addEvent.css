@@ -1,0 +1,29 @@
+body {
+
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    justify-content: center;
+}
+button {
+    width: 400px;
+    height: 100px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 120px;
+    font-size: 20px;
+
+}
+.wrapper {
+    height: 800px;
+    
+}
+.img{
+    display: none;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    
+}
