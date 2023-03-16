@@ -16,7 +16,8 @@ h1 {
     position: relative;
     display: inline-block;
 }
-h1::before{
+
+h1::before {
     content: " ";
     background: #33CCFF;
     width: 50px;
@@ -34,34 +35,70 @@ h1::before{
     flex-direction: column;
     background-color: white;
     width: 1000px;
-    height: 600px;
+    height: 700px;
     margin: 200px;
+    margin-top: 50px;
     border-radius: 3%;
+    background: rgb(115, 109, 213);
+    background: linear-gradient(90deg, rgba(115, 109, 213, 1) 0%, rgba(0, 212, 255, 1) 37%, rgba(189, 189, 215, 1) 74%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .img-block {
-
-    text-align: center;
-    
+    position: relative;
+    left: 56px;
+    margin-bottom: 30px;
+    margin-top: 25px;
 }
 
 .apostrophe {
     width: 50px;
     border-radius: 50%;
     height: 50px;
-    position: relative;
     top: -100px;
     right: -50px;
     background-color: aqua;
     color: white;
+    position: relative;
+    z-index: 2;
 }
 
 
 .avatar {
     width: 200px;
     border-radius: 50%;
+    position: relative;
+    z-index: 1;
 }
 
+.half-circle {
+    width: 200px;
+    height: 179.92px;
+    background-color: aqua;
+    border-radius: 50%;
+    position: relative;
+    right: 182px;
+    z-index: 0;
+
+}
+
+.name {
+    font-size: 30px;
+    margin: 0;
+}
+.job {
+    margin: 10px;
+    font-size: 25px;
+
+}
+.information {
+    margin: 15px;
+    font-size: 25px;
+    line-height: 35px;
+
+}
+.btn-container {
+}
 .prev-btn img {
     width: 100px;
     height: 80px;
@@ -73,7 +110,10 @@ h1::before{
 .prev-btn {
     background: none;
     border: none;
+    position: relative;
+    top:   20px;
 }
+
 
 .img-btn {
     transform: rotate(180deg);
