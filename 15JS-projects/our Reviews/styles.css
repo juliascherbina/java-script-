@@ -64,7 +64,7 @@ h1::before {
 }
 
 
-.avatar {
+#avatar {
     width: 200px;
     border-radius: 50%;
     position: relative;
@@ -82,23 +82,22 @@ h1::before {
 
 }
 
-.name {
+#name {
     font-size: 30px;
     margin: 0;
 }
-.job {
+#job {
     margin: 10px;
     font-size: 25px;
 
 }
-.information {
+#information {
     margin: 15px;
     font-size: 25px;
     line-height: 35px;
 
 }
-.btn-container {
-}
+
 .prev-btn img {
     width: 100px;
     height: 80px;
@@ -111,8 +110,22 @@ h1::before {
     background: none;
     border: none;
     position: relative;
-    top:   20px;
+    top:  20px;
 }
+.prev2-btn{
+    background: none;
+    border: none;
+    position: relative;
+    top:  20px;
+}
+.prev2-btn img {
+    width: 100px;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+
+}
+
 
 
 .img-btn {
