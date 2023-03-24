@@ -65,7 +65,8 @@ h1::before {
 
 
 #avatar {
-    width: 200px;
+    max-width: 200px;
+    max-height: 185px;
     border-radius: 50%;
     position: relative;
     z-index: 1;
@@ -86,11 +87,13 @@ h1::before {
     font-size: 30px;
     margin: 0;
 }
+
 #job {
     margin: 10px;
     font-size: 25px;
 
 }
+
 #information {
     margin: 15px;
     font-size: 25px;
@@ -106,18 +109,24 @@ h1::before {
 
 }
 
-.prev-btn {
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.prev-btn,
+.prev2-btn {
     background: none;
     border: none;
     position: relative;
-    top:  20px;
+    top: 20px;
+    cursor: pointer;
 }
-.prev2-btn{
-    background: none;
-    border: none;
-    position: relative;
-    top:  20px;
-}
+
+
 .prev2-btn img {
     width: 100px;
     height: 80px;
@@ -127,6 +136,12 @@ h1::before {
 }
 
 
+.random-btn {
+    font-size: 25px;
+    margin-top: 40px;
+    background-color: aqua;
+    cursor: pointer;
+}
 
 .img-btn {
     transform: rotate(180deg);
