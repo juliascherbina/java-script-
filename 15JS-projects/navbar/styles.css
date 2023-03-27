@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: rgb(81, 194, 242);
+    cursor: pointer;
+}
+.links {
+    list-style-type: none;
+    
+    
+}
