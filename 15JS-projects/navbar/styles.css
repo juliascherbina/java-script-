@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+
 .nav-header {
     display: flex;
     align-items: center;
@@ -8,11 +10,87 @@
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: rgb(81, 194, 242);
+    color: rgb(242, 81, 84);
     cursor: pointer;
+    
 }
-.links {
+
+.nav-toggle:hover {
+    color: rgb(51, 153, 100);
+}
+/* .nav-toggle:hover{
+    transform: rotate(90deg);
+    cursor: pointer;
+} */
+/* 
+.nav-toggle i:hover {
+    cursor: pointer;
+    color: aquamarine;
+} */
+.icon {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -40px;
+
+}
+.links li:first-of-type:hover{
+background-color:  brown;
+}
+.links, .social-icons {
     list-style-type: none;
-    
+    display: flex;
+    gap: 20px;
+    padding-left: 140px;
+    font-size: 30px;
+    margin: 0;
+    letter-spacing: 3px;
     
 }
+.links a {
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+
+/* @media screen and (min-width:800px){
+    .nav-center {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+      }
+      .nav-header {
+        padding: 0;
+      }
+      .nav-toggle {
+        display: none;
+      }
+      .links {
+        height: auto;
+        display: flex;
+      }
+      .links a {
+        padding: 0;
+        margin: 0 0.5rem;
+      }
+      .links a:hover {
+        padding: 0;
+        background: transparent;
+      }
+      .social-icons {
+        display: flex;
+      }
+      .social-icons a {
+        margin: 0 0.5rem;
+        color: var(--clr-primary-5);
+        transition: var(--transition);
+      }
+      .social-icons a:hover {
+        color: var(--clr-primary-7);
+      }
+    
+} */
