@@ -53,7 +53,9 @@ z-index: 2;
 .social-icons a{
   color: rgb(16, 20, 135);
 }
-
+li {
+  height: 50px;
+}
 .links a {
   color: black;
 }
