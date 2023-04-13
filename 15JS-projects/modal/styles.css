@@ -36,7 +36,7 @@ body {
 .btn {
     width: 200px;
     height: 62px;
-margin: 32px 0px 0px;
+    margin: 32px 0px 0px;
     font-size: 24px;
     border-radius: 30px;
     padding: 6px 12px;
@@ -45,9 +45,45 @@ margin: 32px 0px 0px;
     color: white;
     cursor: pointer;
     letter-spacing: 0.25rem;
+    z-index: 10;
 }
 
 .modal-content {
+    /* transform: translate(-300%); */
+    position: fixed;
     z-index: -10;
-    position: relative;
+    visibility: hidden;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    width: 25%;
+    height: 25%;
+    text-align: center;
+    padding-top: 80px;
+
+}
+
+.close-btn {
+    color: red;
+    border: none;
+    background: none;
+    font-size: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.modal-open {
+    /* transform: translate(0); */
+    /* background: transparent;
+    z-index: 10; */
+    z-index: 1;
+    visibility: visible;
+    
+}
+
+@media screen and (min-width:676px) {
+    .modal-content {
+        width: 400px;
+    }
 }
