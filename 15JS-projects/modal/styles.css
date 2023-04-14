@@ -2,6 +2,8 @@
 
 body {
     background: url(./hero.jpeg) no-repeat center center fixed;
+    /* opacity: 30%; */
+
     background-size: cover;
     overflow: hidden;
     display: grid;
@@ -11,6 +13,17 @@ body {
 
 
 }
+
+/* body::after{
+    background: #7bcbed;
+    content: "";
+    height: 100%;
+    opacity: .65;
+    position: absolute;
+    top: 0;
+    transition: all .25s ease;
+    width: 100%;z-index: -1;
+} */
 
 .container {
     text-align: center;
@@ -49,16 +62,14 @@ body {
 }
 
 .modal-content {
-    /* transform: translate(-300%); */
     position: fixed;
-    z-index: -10;
-    visibility: hidden;
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    width: 25%;
-    height: 25%;
+    height: 30vh;
     text-align: center;
     padding-top: 80px;
+    font-size: 30px;
+    border-radius: 3%;
 
 }
 
@@ -73,17 +84,26 @@ body {
     cursor: pointer;
 }
 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(73, 166, 233, 0.5);
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+    z-index: -10;
+}
+
 .modal-open {
-    /* transform: translate(0); */
-    /* background: transparent;
-    z-index: 10; */
-    z-index: 1;
+    z-index: 10;
     visibility: visible;
-    
 }
 
 @media screen and (min-width:676px) {
     .modal-content {
-        width: 400px;
+        width: 660px;
     }
 }
