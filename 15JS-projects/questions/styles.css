@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+body {
+    background-color: antiquewhite;
+}
+
+.title h1 {
+    font-family: "Great Vibes", cursive;
+    text-transform: capitalize;
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+}
+
+.questions {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.question-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 24px;
+    letter-spacing: 4px;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+}
+.question-title p{
+    color: black;
+}
+.question {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 30px;
+    padding: 30px;
+    width: 620px;
+    height: 180px;
+    text-align: center;
+}
+.section-center {
+    margin: 0 auto;
+    max-width: 620px;
+}
+
+.plus-btn,
+.minus-btn {
+    margin: 15px;
+    border: none;
+    background: none;
+}
+
+.plus-icon,
+.minus-icon {
+    font-size: 30px;
+}
+p{
+    color: gray;
+    font-size: 25px;
+    margin: 0;
+}
