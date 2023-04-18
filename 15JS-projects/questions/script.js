@@ -12,16 +12,14 @@ questions.forEach(function (question) {
     console.log(btn)
     btn.addEventListener('click', function () {
         question.classList.toggle('show-text')
-    })
-    // const btnMinus = question.querySelector('.minus-btn')
-    // btnMinus.addEventListener('click', function () {
-    //     question.classList.toggle('show-text')
-    // })
-    btn.addEventListener('click', function () {
         questions.forEach(function (item) {
             if (item !== question) {
               item.classList.remove('show-text')
             }
         })
     })
+    // const btnMinus = question.querySelector('.minus-btn')
+    // btnMinus.addEventListener('click', function () {
+    //     question.classList.toggle('show-text')
+    // })
 })
