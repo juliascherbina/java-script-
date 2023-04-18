@@ -27,9 +27,11 @@ body {
     letter-spacing: 4px;
     font-family: 'Open Sans', sans-serif;
     color: black;
+    height: 80px;
 }
 .question-title p{
     color: black;
+    margin-bottom: 20px;
 }
 .question {
     background-color: white;
@@ -37,7 +39,7 @@ body {
     margin: 30px;
     padding: 30px;
     width: 620px;
-    height: 180px;
+    height: 80px;
     text-align: center;
 }
 .section-center {
@@ -50,14 +52,44 @@ body {
     margin: 15px;
     border: none;
     background: none;
+
 }
 
 .plus-icon,
 .minus-icon {
-    font-size: 30px;
+    font-size: 25px;
+    
 }
 p{
     color: gray;
     font-size: 25px;
     margin: 0;
+}
+.btn-block{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: 140px;
+    padding-left: 150px;
+}
+
+.answer-title {
+    display: none;
+}
+.show-text .answer-title {
+    display: block;
+}
+.minus-icon {
+    display: none;
+}
+.show-text .minus-icon {
+    display: inline;
+    
+}
+.show-text .plus-icon {
+    display: none;
+}
+.show-text {
+    height: 180px;
 }
