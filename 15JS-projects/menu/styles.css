@@ -1,1 +1,81 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+
+}
+
+h2 {
+    margin: 0;
+    padding: 10px;
+}
+
+.underline {
+    background-color: brown;
+    height: 4px;
+    width: 80px;
+    margin: 0 auto;
+
+}
+
+.section-center {
+    display: grid;
+    grid-template-columns: 700px 700px ;
+    grid-column-gap: 200px;
+    justify-content: center;
+}
+
+.photo {
+    width: 300px;
+    height: 200px;
+    margin: 30px;
+    border-style: inset;
+    border-color: rgb(227, 161, 74);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.menu-item {
+    display: flex;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px dotted rgba(135, 133, 133, 0.878);
+}
+.food-name {
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+.price {
+    font-size: 24px;
+    color: rgb(227, 161, 74);
+}
+.item-text {
+    font-size: 20px;
+    color: rgba(139, 153, 203, 0.878);
+}
+.btn-container {
+    text-align: center;
+    margin: 25px;
+    
+}
+.btn-filter{
+    width: 90px;
+    height: 38px;
+    font-size: 20px;
+    padding: 0;
+    margin: 10px;
+    text-align: center;
+    color:  rgb(227, 161, 74);
+    background-color: white;
+    border: 3px outset rgb(227, 161, 74);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+.btn-filter:hover{
+    background-color:rgb(227, 161, 74) ;
+    color: white;
+    transition: 0.5s;
+}
