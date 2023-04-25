@@ -81,26 +81,15 @@ const menu = [
     }
 ];
 const sectionCenter = document.querySelector('.section-center')
-const btnsFilter = document.querySelectorAll('.btn-filter')
-
-
+const container = document.querySelector('.btn-container')
 
 window.addEventListener('DOMContentLoaded', function () {
-    displayMenuItems(menu)
+    displayMenuItems(menu);
+    DisplayMenuBtns()
 })
-
-btnsFilter.forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-    console.log(e.currentTarget.dataset)
-    })
-})
-
-
 
 function displayMenuItems(menuItems) {
     let displayMenu = menuItems.map(function (item) {
-        // console.log(item.prise)
-        // console.log(item)
         return ` 
         <article class="menu-item">
             <img src=${item.img} class=photo alt=${item.title}>
@@ -116,7 +105,52 @@ function displayMenuItems(menuItems) {
     </article>`
     })
     displayMenu = displayMenu.join(" ")
-    console.log(displayMenu)
     sectionCenter.innerHTML = displayMenu
-
 }
+
+function DisplayMenuBtns() {
+    const categories = menu.reduce(function (values, item) {
+        if (!values.includes(item.category)) {
+            values.push(item.category)
+        }
+        return values
+    }, ['all'])
+    const categoryBtns = categories.map(function (category) {
+        return ` <button class="btn-filter" type="button" data-id=${category}>${category}</button>`
+    }).join('')
+    container.innerHTML = categoryBtns
+    const btnsFilter = document.querySelectorAll('.btn-filter')
+    btnsFilter.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            const category = e.currentTarget.dataset.id;
+            const Menucategory = menu.filter(function (menuItem) {
+                if (category === menuItem.category) {
+                    return menuItem
+                }
+            })
+            if (category === 'all') {
+                displayMenuItems(menu)
+            }
+            else {
+                displayMenuItems(Menucategory)
+            }
+
+        }
+        )
+    })
+}
+
+
+
+// let arr=['Julia','Julia','Olga']
+// let res =arr.reduce(function(total,item){
+//     total[item]+=1;
+//     console.log(arr)
+
+//     return total;
+// },{} )
+// let array = [1, 2, 3]
+// const sum = array.reduce(function (total, item) {
+//     return total + item
+// })
+// console.log(sum)
