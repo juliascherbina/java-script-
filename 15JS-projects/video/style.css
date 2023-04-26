@@ -1,14 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
-body{
+
+body {
     margin: 0;
     padding: 0;
 }
+
 header {
     min-height: 100vh;
     position: relative;
     place-items: center;
     display: grid;
 
+}
+
+header::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }
 
 .video-container {
@@ -25,4 +38,63 @@ header {
 h1 {
     color: white;
     font-size: 4rem;
+}
+
+.switch-btn {
+    position: absolute;
+    height: 32px;
+    bottom: 7%;
+    left: 7%;
+    width: 7rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    border-radius: 0.5rem;
+
+}
+
+.switch-btn span {
+    display: inline-block;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    color: #49a6e9;
+
+}
+
+.slide .switch {
+    left: 50%;
+}
+
+.switch {
+    background: #49a6e9;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: block;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 999;
+}
+.hide-preloader{
+    visibility: hidden;
+    z-index: -999;
 }
