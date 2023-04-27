@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+nav {
+    padding: 1rem 1.5rem;
+}
+.nav-center {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+
+.nav-header img {
+    height: 50px;
+}
+.links {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+.links a{
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 1rem;
+    background: transparent;
+    color:  hsl(209, 61%, 16%);
+    text-decoration: none;
+
+}
+.banner {
+    background: url(./Untersberg_Mountain_Salzburg_Austria_Landscape_Photography_\(256594075\).jpeg)center/cover no-repeat;
+    width: 1162px;
+    min-height: 100vh;
+    
+}
