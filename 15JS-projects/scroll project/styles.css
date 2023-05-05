@@ -15,6 +15,15 @@ header {
 
 }
 
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 /* header::after{
     margin: 0;
     padding: 0;
@@ -23,13 +32,12 @@ header {
 
 nav {
     padding: 1rem 1.5rem;
+    background: transparent;
+    box-sizing: border-box;
+    background: white;
 }
 
-.nav-center {
-    display: flex;
-    justify-content: space-around;
-    padding: 16px 24px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.fixed-nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -38,18 +46,25 @@ nav {
 
 }
 
-.nav-header img {
+.logo {
     height: 50px;
 }
 
+.nav-header img {
+
+    display: block;
+}
+
 .links {
-    list-style-type: none;
-    display: flex;
-    gap: 10px;
-    height: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: block;
+    line-height: 1.5;
 
 }
-.scroll-link:hover{
+
+.scroll-link:hover {
     color: rgb(139, 218, 218);
     transition: 0.5s;
 }
@@ -65,24 +80,38 @@ nav {
     text-decoration: none;
 
 }
-.btn:hover{
+
+.btn:hover {
     background: #fff;
     color: rgb(85, 185, 185);
 }
- .top-link{
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    bottom: 10px;
-    right: 50px;
-    top: 75px;
-    height: 58px;
-    color: #fff;
+
+.top-link {
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: hsla(182, 63%, 54%);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.5rem;
+    color: var(--clr-white);
+    animation: bounce 2s ease-in-out infinite;
+    visibility: hidden;
+    z-index: -100;
+}
+
+.show-link {
+    visibility: visible;
+    z-index: 100;
 }
 
 li {
     margin-right: 20px;
     padding-right: 10px;
+    list-style-type: none;
 }
 
 
@@ -131,44 +160,64 @@ h1 {
 }
 
 .nav-toggle {
-    display: none;
+    font-size: 1.5rem;
+    color: hsl(211, 39%, 23%);
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
 }
 
 @media screen and (max-width:800px) {
-    .nav-toggle {
-        border: none;
-        background: none;
-        display: inline;
-        position: absolute;
-        right: 150px;
-        color: black;
-        font-weight: 900;
-        font-size: 1.5rem;
+   
+    .nav-center {
+        width: 90vw;
+        max-width: 1170px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* display: flex;
+        align-items: center;
+        justify-content: space-between; */
+        background-color: #fff;
     }
-    .links-container{
+
+    .links-container {
         visibility: hidden;
         height: 0;
-        
-    }
-    .show-links{
-        visibility: visible;
-        height: 250px;
+        transition: all 0.3s linear;
+        display: block;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+
 
     }
-    .links{
+
+    .show-links {
+        visibility: visible;
+        height: 250px;
+        z-index: 100;
+        transition: 1s;
+
+    }
+
+    .links {
         display: flex;
         flex-direction: column;
         position: absolute;
         left: 0;
         top: 60px;
         gap: 20px;
-        
+        list-style-type: none;
+
     }
+
     /* .nav-center{
         height: 250px;
     } */
-    
-    
+
+
 }
 
 .section {
@@ -187,9 +236,11 @@ h1 {
     font-size: 2.5rem;
     color: black;
 }
-.title span{
+
+.title span {
     color: aqua;
 }
+
 #about,
 #services,
 #tours {
@@ -203,7 +254,8 @@ footer {
     background: hsl(209, 61%, 16%);
     padding: 5rem 1rem;
 }
-footer p{
+
+footer p {
     text-align: center;
     text-transform: capitalize;
     padding: 0;

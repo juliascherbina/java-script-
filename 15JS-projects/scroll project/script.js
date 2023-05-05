@@ -4,19 +4,63 @@
 //offsetTop - A Number, representing the top position of the element, in pixels
 
 // ********** set date ************
-const date=document.getElementById('date');
-date.innerHTML=new Date().getFullYear();
+const date = document.getElementById('date');
+date.innerHTML = new Date().getFullYear();
 // ********** close links ************
-const linksContainer=document.querySelector('.links-container')
-const navtoggle=document.querySelector('.nav-toggle')
-const links=document.querySelector('.links')
-navtoggle.addEventListener('click', function(){
+const linksContainer = document.querySelector('.links-container')
+const navtoggle = document.querySelector('.nav-toggle')
+const links = document.querySelector('.links')
+navtoggle.addEventListener('click', function () {
     linksContainer.classList.toggle('show-links')
     // linksContainer.style.height='200px'
-    const heightOfContainer=linksContainer.getBoundingClientRect()
-    
+    // const heightOfContainer=linksContainer.getBoundingClientRect()
+
+
 })
 // ********** fixed navbar ************
 
+const navbar = document.getElementById('nav')
+const toplink = document.querySelector('.top-link')
+toplink.addEventListener('click', function(){
+    window.scrollTo({
+        top: 0
+    })
+})
+window.addEventListener('scroll', function () {
+    const heightofscreen = window.pageYOffset;
+    const navHeight = navbar.getBoundingClientRect().height
+    if (heightofscreen > navHeight) {
+        navbar.classList.add('fixed-nav')
+    }
+    else {
+        navbar.classList.remove('fixed-nav')
+    }
+    if (heightofscreen > 500) {
+        toplink.classList.add('show-link')
+    }
+    else {
+        toplink.classList.remove('show-link')
+    }
+})
+
+
+
+
 // ********** smooth scroll ************
 // select links
+const scrolLinks = document.querySelectorAll('.scroll-link')
+scrolLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+        e.preventDefault()
+        //navigate to specific spot
+        const id = e.currentTarget.getAttribute('href').slice(1)
+        const element = document.getElementById(id)
+        let position = element.offsetTop
+        console.log(position)
+        window.scrollTo({
+            left: 0,
+            top: position
+        })
+        linksContainer.classList.remove('show-links')
+    })
+})
