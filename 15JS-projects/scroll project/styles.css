@@ -22,6 +22,7 @@ header {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    width: 700px;
 }
 
 /* header::after{
@@ -32,9 +33,18 @@ header {
 
 nav {
     padding: 1rem 1.5rem;
-    background: transparent;
-    box-sizing: border-box;
     background: white;
+    box-sizing: border-box;
+
+}
+
+.nav-center {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .fixed-nav {
@@ -48,6 +58,10 @@ nav {
 
 .logo {
     height: 50px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .nav-header img {
@@ -61,6 +75,7 @@ nav {
     padding: 0;
     display: block;
     line-height: 1.5;
+    display: flex;
 
 }
 
@@ -166,21 +181,28 @@ h1 {
     border-color: transparent;
     transition: all 0.3s linear;
     cursor: pointer;
+    position: fixed;
+    right: 20px;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    nav {
+        background-color: transparent;
+    }
+
 }
 
 @media screen and (max-width:800px) {
-   
-    .nav-center {
-        width: 90vw;
-        max-width: 1170px;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        /* display: flex;
-        align-items: center;
-        justify-content: space-between; */
-        background-color: #fff;
+    .nav {
+        background: white;
+
     }
+
+
 
     .links-container {
         visibility: hidden;
