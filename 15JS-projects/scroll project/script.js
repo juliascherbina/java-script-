@@ -21,7 +21,7 @@ navtoggle.addEventListener('click', function () {
 
 const navbar = document.getElementById('nav')
 const toplink = document.querySelector('.top-link')
-toplink.addEventListener('click', function(){
+toplink.addEventListener('click', function () {
     window.scrollTo({
         top: 0
     })
@@ -46,7 +46,6 @@ window.addEventListener('scroll', function () {
 
 
 
-// ********** smooth scroll ************
 // select links
 const scrolLinks = document.querySelectorAll('.scroll-link')
 scrolLinks.forEach(function (link) {
@@ -54,13 +53,24 @@ scrolLinks.forEach(function (link) {
         e.preventDefault()
         //navigate to specific spot
         const id = e.currentTarget.getAttribute('href').slice(1)
-        const element = document.getElementById(id)
-        let position = element.offsetTop
-        console.log(position)
+        const element = document.getElementById(id);
+        //calculate the heights
+        const navHeight = navbar.getBoundingClientRect().height;
+        const containerHeight = linksContainer.getBoundingClientRect().height;
+        const fixednavs = navbar.classList.contains('fixed-nav');
+        let position = element.offsetTop - navHeight;
+        if (!fixednavs) {
+            position = position - navHeight
+        }
+        // if (navHeight > 82) {
+        //     position = position + containerHeight
+        // }
         window.scrollTo({
             left: 0,
             top: position
         })
         linksContainer.classList.remove('show-links')
+
     })
 })
+// ********** smooth scroll ************
