@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+  }
+  
+  .block {
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .block img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15%;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    letter-spacing: 2px;
+  }
+  p a:hover{
+    background: rgb(0, 200, 255);
+    border-radius: 10%;
+    color: azure;
+    border: 2px solid;
+    padding: 10px;
+    box-shadow: 6px 4px 8px -2px;
+    transition: 0.5s;
+  }
