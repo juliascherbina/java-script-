@@ -35,12 +35,4 @@ body{
     letter-spacing: 2px;
     
   }
-  p a:hover{
-    background: rgb(0, 200, 255);
-    border-radius: 10%;
-    color: azure;
-    border: 2px solid;
-    padding: 10px;
-    box-shadow: 6px 4px 8px -2px;
-    transition: 0.5s;
-  }
+ 
